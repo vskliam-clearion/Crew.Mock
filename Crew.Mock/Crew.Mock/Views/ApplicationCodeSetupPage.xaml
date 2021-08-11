@@ -4,8 +4,8 @@
              x:Class="Crew.Mock.Views.ApplicationCodeSetupPage">
     <ContentPage.Content>
         <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-            <Button Text="Login"
-                    Clicked="Button_Clicked"/>
+            <Button Text="Enter App Code"
+                    Clicked="EnterAppCodeButtonClicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

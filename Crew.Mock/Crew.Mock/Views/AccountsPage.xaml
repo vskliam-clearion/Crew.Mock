@@ -4,8 +4,12 @@
              x:Class="Crew.Mock.Views.AccountsPage">
     <ContentPage.Content>
         <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-            <Button Text="Login"
-                    Clicked="Button_Clicked"/>
+            <Button x:Name="addNewAccButton" Text="Add New Account"
+                    Clicked="AddNewAccountButtonClicked"/>
+            <Button x:Name="openAccButton"
+                    Text="Open Account"
+                    IsEnabled="False"
+                    Clicked="OpenAccountButtonClicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

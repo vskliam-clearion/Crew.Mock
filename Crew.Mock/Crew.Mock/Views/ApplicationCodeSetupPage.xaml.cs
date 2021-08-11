@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using Crew.Mock.Helpers;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -17,8 +13,9 @@ namespace Crew.Mock.Views
             InitializeComponent();
         }
 
-        private async void Button_Clicked(object sender, EventArgs e)
+        private async void EnterAppCodeButtonClicked(object sender, EventArgs e)
         {
+            AppCenterHelper.TrackEvent(nameof(EnterAppCodeButtonClicked));
             await Navigation.PushModalAsync(new AccountsPage());
         }
     }

@@ -3,6 +3,7 @@ using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
 using Xamarin.Forms;
+using Crew.Mock.Helpers;
 
 namespace Crew.Mock
 {
@@ -21,16 +22,18 @@ namespace Crew.Mock
                 "uwp=8746b46c-762f-4602-a21b-5d08270b094f;" +
                 "ios=2c2cf119-8aee-496d-bae1-0df68dedeb00",
                 typeof(Analytics), typeof(Crashes));
+
+            AppCenterHelper.TrackEvent("Application started");
         }
 
         protected override void OnSleep()
         {
-
+            AppCenterHelper.TrackEvent("Application is on sleep");
         }
 
         protected override void OnResume()
         {
-
+            AppCenterHelper.TrackEvent("Application resumed");
         }
     }
 }

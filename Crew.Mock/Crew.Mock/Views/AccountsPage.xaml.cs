@@ -1,6 +1,6 @@
 ﻿using Crew.Mock.Helpers;
 using System;
-using System.Linq;
+using System.Collections.Generic;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -9,8 +9,6 @@ namespace Crew.Mock.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AccountsPage : ContentPage
     {
-        private static readonly Random Random = new Random();
-
         public AccountsPage()
         {
             InitializeComponent();
@@ -22,7 +20,7 @@ namespace Crew.Mock.Views
             {
                 AppCenterHelper.TrackEvent(nameof(AddNewAccountButtonClicked));
 
-                if (Random.Next(1, 4) == 1)
+                if (DataGenerator.Chance25Percents)
                 {
                     throw new Exception("Failed to add Account");
                 }

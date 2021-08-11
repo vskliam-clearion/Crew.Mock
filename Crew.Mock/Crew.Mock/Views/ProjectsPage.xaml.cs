@@ -19,11 +19,6 @@ namespace Crew.Mock.Views
             InitializeComponent();
         }
 
-        private async void Button_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PopModalAsync();
-        }
-
         private void Button_Clicked_1(object sender, EventArgs e)
         {
             Crashes.GenerateTestCrash();

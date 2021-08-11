@@ -4,8 +4,6 @@
              x:Class="Crew.Mock.Views.ProjectsPage">
     <ContentPage.Content>
         <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-            <Button Text="GoBack"
-                Clicked="Button_Clicked"/>
             <Button Text="Generate Crash"
                 Clicked="Button_Clicked_1"/>
             <Button Text="Generate unhandled exception"

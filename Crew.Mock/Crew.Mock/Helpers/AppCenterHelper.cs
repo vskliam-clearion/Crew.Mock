@@ -14,7 +14,11 @@ namespace Crew.Mock.Helpers
 
         public static void TrackEvent(string eventName, IDictionary<string, string> properties = null)
         {
+            if (properties is null)
+                properties = DataGenerator.FakeProperties;
+
             Analytics.TrackEvent(eventName, properties);
         }
+
     }
 }

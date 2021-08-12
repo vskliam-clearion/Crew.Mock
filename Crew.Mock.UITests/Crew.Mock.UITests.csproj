@@ -38,19 +38,5 @@
     <Compile Include="BaseTestFixture.cs" />
     <Compile Include="Tests.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Crew.Mock\Crew.Mock.Android\Crew.Mock.Android.csproj">
-      <Project>{0BC1F15D-9F9E-4BF1-8BFE-5D9771127454}</Project>
-      <Name>Crew.Mock.Android</Name>
-      <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
-      <Private>False</Private>
-    </ProjectReference>
-    <ProjectReference Include="..\Crew.Mock\Crew.Mock.iOS\Crew.Mock.iOS.csproj">
-      <Project>{28995F37-9064-45C8-950C-4F0BCED76D2B}</Project>
-      <Name>Crew.Mock.iOS</Name>
-      <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
-      <Private>False</Private>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

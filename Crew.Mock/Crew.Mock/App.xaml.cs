@@ -1,6 +1,9 @@
-﻿using System;
+﻿using Crew.Mock.Views;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+using Crew.Mock.Helpers;
 
 namespace Crew.Mock
 {
@@ -10,19 +13,27 @@ namespace Crew.Mock
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new ApplicationCodeSetupPage());
         }
 
         protected override void OnStart()
         {
+            AppCenter.Start("android=bd628be0-b5fd-42d5-a545-316d31a9c0aa;" +
+                "uwp=8746b46c-762f-4602-a21b-5d08270b094f;" +
+                "ios=2c2cf119-8aee-496d-bae1-0df68dedeb00",
+                typeof(Analytics), typeof(Crashes));
+
+            AppCenterHelper.TrackEvent("Application started");
         }
 
         protected override void OnSleep()
         {
+            AppCenterHelper.TrackEvent("Application is on sleep");
         }
 
         protected override void OnResume()
         {
+            AppCenterHelper.TrackEvent("Application resumed");
         }
     }
 }

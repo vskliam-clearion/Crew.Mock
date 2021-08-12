@@ -1,29 +1,9 @@
 # README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+Xamarin test project to set up CI/CD and then migrate the best practices into the Crew.Mobile
 
-### What is this repository for? ###
+# BUILD STATUSES #
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
-
-### How do I get set up? ###
-
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+|Android|iOS|UWP|
+|---|---|---|
+|[![Build status](https://build.appcenter.ms/v0.1/apps/43c72c27-e28c-47bf-913b-a9e9321134b4/branches/dev/badge)](https://appcenter.ms)|[![Build status](https://build.appcenter.ms/v0.1/apps/b75a61ee-cfa0-4e2a-b0b4-2f8f042431df/branches/dev/badge)](https://appcenter.ms)|[![Build status](https://build.appcenter.ms/v0.1/apps/0639fb8b-ba95-4175-a926-35a03e4c3964/branches/dev/badge)](https://appcenter.ms)|

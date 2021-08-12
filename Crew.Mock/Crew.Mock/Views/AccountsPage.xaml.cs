@@ -20,10 +20,10 @@ namespace Crew.Mock.Views
             {
                 AppCenterHelper.TrackEvent(nameof(AddNewAccountButtonClicked));
 
-                if (DataGenerator.Chance25Percents)
-                {
-                    throw new Exception("Failed to add Account");
-                }
+                //if (DataGenerator.Chance25Percents)
+                //{
+                //    throw new Exception("Failed to add Account");
+                //}
 
                 AppCenterHelper.TrackEvent("Account Added Successfully");
 

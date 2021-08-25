@@ -1,6 +1,5 @@
-﻿using NUnit.Framework.Internal;
+﻿using NUnit.Framework;
 using System;
-using System.IO;
 using Xamarin.UITest;
 
 namespace Crew.Mock.UITests
@@ -9,7 +8,7 @@ namespace Crew.Mock.UITests
     {
         private const string ApkPath = "Crew.Mock/Crew.Mock.Android/bin/Debug/com.clearion.crew.mock.apk";
         private const string PackageName = "com.clearion.crew.mock";
-        private const string AppPath = "../../../bin/iPhoneSimulator/Debug/Crew.iOS.app";
+        private const string AppPath = "/Users/vskliam/crew.mock/Crew.Mock/Crew.Mock.iOS/bin/iPhoneSimulator/Debug/device-builds/iphone 12-14.5/Crew.Mock.iOS.app";
         private const string IpaBundleId = "com.clearion.crew.mock";
 
         private static IApp _app;
@@ -58,23 +57,26 @@ namespace Crew.Mock.UITests
 
                 _app = ConfigureApp
                     .Android
-                    .EnableLocalScreenshots()
+                    //.EnableLocalScreenshots()
                     .InstalledApp(PackageName) // Used to run an already installed app
-                    //.ApkFile(path) // Used to deploy and run a .apk file
+                                               //.ApkFile(path) // Used to deploy and run a .apk file
                     .StartApp();
             }
 
-
-            if (Environment.OSVersion.Platform == PlatformID.MacOSX)
+            if (Platform == Platform.iOS)
             {
-                if (Platform == Platform.iOS)
+                if (Environment.OSVersion.Platform == PlatformID.MacOSX || Environment.OSVersion.Platform == PlatformID.Unix)
                 {
+
                     _app = ConfigureApp
                         .iOS
-                        //.AppBundle(AppPath) // Used to run a .app file on an ios simulator:
-                        .InstalledApp(IpaBundleId) // Used to run a .ipa file on a physical ios device:
+                        .AppBundle(AppPath) // Used to run a .app file on an ios simulator:
+                        .DeviceIdentifier("1D512309-B9EF-4543-A238-271C0121600E")
+                        //.InstalledApp(IpaBundleId) // Used to run a .ipa file on a physical ios device:
                         .StartApp();
+
                 }
+                else Assert.Ignore();
             }
         }
     }

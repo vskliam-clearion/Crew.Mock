@@ -34,16 +34,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppManager.cs" />
-    <Compile Include="Helpers\AID.cs" />
-    <Compile Include="Helpers\Categories.cs" />
-    <Compile Include="Helpers\TestConfiguration.cs" />
-    <Compile Include="Pages\ApplicationSetupPage.cs" />
-    <Compile Include="Pages\Base\BasePage.cs" />
-    <Compile Include="Pages\Base\CrewBasePage.cs" />
     <Compile Include="PlatformQuery.cs" />
-    <Compile Include="TESTS\Base\BaseTestFixture.cs" />
-    <Compile Include="TESTS\Base\CrewTestFixture.cs" />
-    <Compile Include="TESTS\Tests.cs" />
+    <Compile Include="BaseTestFixture.cs" />
+    <Compile Include="Tests.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

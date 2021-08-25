@@ -1,7 +1,7 @@
 ﻿using NUnit.Framework;
 using Xamarin.UITest;
 
-namespace Crew.Mock.UITests.Tests.Base
+namespace Crew.Mock.UITests
 {
     [TestFixture(Platform.Android)]
     [TestFixture(Platform.iOS)]

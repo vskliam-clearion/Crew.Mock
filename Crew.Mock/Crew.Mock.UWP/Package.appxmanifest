@@ -7,15 +7,15 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="435effad-be8c-46b1-a65b-558149e32a9b"
-    Publisher="CN=0549ba7e-4316-4b68-bc08-b61d45fded8e"
+    Name="Crew.Mock"
+    Publisher="CN=vskliam"
     Version="1.0.0.0" />
 
   <mp:PhoneIdentity PhoneProductId="ec0cc741-fd3e-485c-81be-68815c480690" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
-    <DisplayName>Crew.Mock.UWP</DisplayName>
-    <PublisherDisplayName>0549ba7e-4316-4b68-bc08-b61d45fded8e</PublisherDisplayName>
+    <DisplayName>Crew.Mock</DisplayName>
+    <PublisherDisplayName>Clearion</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
@@ -32,10 +32,10 @@
       Executable="$targetnametoken$.exe"
       EntryPoint="Crew.Mock.UWP.App">
       <uap:VisualElements
-        DisplayName="Crew.Mock.UWP"
+        DisplayName="Crew.Mock"
         Square150x150Logo="Assets\Square150x150Logo.png"
         Square44x44Logo="Assets\Square44x44Logo.png"
-        Description="Crew.Mock.UWP"
+        Description="Crew Mock"
         BackgroundColor="transparent">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square310x310Logo="Assets\LargeTile.png" Square71x71Logo="Assets\SmallTile.png">
           <uap:ShowNameOnTiles>
@@ -45,6 +45,8 @@
           </uap:ShowNameOnTiles>
         </uap:DefaultTile>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
+        <uap:InitialRotationPreference>
+          <uap:Rotation Preference="landscape"/></uap:InitialRotationPreference>
       </uap:VisualElements>
     </Application>
   </Applications>

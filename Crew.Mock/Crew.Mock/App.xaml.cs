@@ -18,9 +18,9 @@ namespace Crew.Mock
 
         protected override void OnStart()
         {
-            AppCenter.Start("android=bd628be0-b5fd-42d5-a545-316d31a9c0aa;" +
-                "uwp=8746b46c-762f-4602-a21b-5d08270b094f;" +
-                "ios=2c2cf119-8aee-496d-bae1-0df68dedeb00",
+            AppCenter.Start("android=00a90f8d-b20a-4257-8386-683c16ccedeb;" +
+                "uwp=984d8ad6-eba1-4ac4-8cb0-5fc2b53ee51f;" +
+                "ios=26cce52a-f7a9-4269-ba2d-fa2df1a085ba",
                 typeof(Analytics), typeof(Crashes));
 
             AppCenterHelper.TrackEvent("Application started");
